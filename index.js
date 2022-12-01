@@ -17,7 +17,7 @@ subscriberAt1.on('message', function (topic, message) {
 
  
 var subscriberAt2  = mqtt.connect("mqtt://18.182.60.4:1884")
-subscriberAt2.subscribe("temp2")
+subscriberAt2.subscribe("temp")
 subscriberAt2.on('message', function (topic, message) {
     // message is Buffer
     var json = JSON.parse(message.toString());
@@ -49,7 +49,7 @@ var messageAt2 = {
 }
 for (let index = 0; index < 10; index++) {
   publisherAt1.publish("temp",JSON.stringify(messageAt1));
-  publisherAt2.publish("temp2",JSON.stringify(messageAt2));
+  publisherAt2.publish("temp",JSON.stringify(messageAt2));
   
   
 }
