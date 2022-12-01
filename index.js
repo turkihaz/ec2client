@@ -42,7 +42,7 @@ var messageAt1 = {
   temp: 24.8,
   timestamp: Date.now()
 }
-var messageAt1 = {
+var messageAt2 = {
   sensor: "sensor 2",
   temp: 24.8,
   timestamp: Date.now()
