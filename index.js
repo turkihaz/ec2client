@@ -1,5 +1,5 @@
 var mqtt = require('mqtt')
-var subscriberAt1  = mqtt.connect("mqtt://18.182.60.4:1884")
+var subscriberAt1  = mqtt.connect("mqtt://13.115.58.242:1883")
 subscriberAt1.subscribe("temp")
 
 var mss1= 0; 
@@ -16,7 +16,7 @@ subscriberAt1.on('message', function (topic, message) {
 
 
  
-var subscriberAt2  = mqtt.connect("mqtt://18.182.60.4:1884")
+var subscriberAt2  = mqtt.connect("mqtt://13.115.58.242:1883")
 subscriberAt2.subscribe("temp")
 subscriberAt2.on('message', function (topic, message) {
     // message is Buffer
@@ -34,8 +34,8 @@ console.log("Sub2: " + ms)
 
 
 
-var publisherAt1  = mqtt.connect("mqtt://35.77.103.62:1883")
-var publisherAt2  = mqtt.connect("mqtt://35.77.103.62:1883")
+var publisherAt1  = mqtt.connect("mqtt://13.115.58.242:1883")
+var publisherAt2  = mqtt.connect("mqtt://13.115.58.242:1883")
 
 var messageAt1 = {
   sensor: "sensor 1",
