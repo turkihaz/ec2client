@@ -16,7 +16,7 @@ local.on('message', function (topic, message) {
 
 
  
-var global  = mqtt.connect("mqtt://18.183.32.165:1883")
+var global  = mqtt.connect("mqtt://18.183.32.165:1884")
 global.subscribe("temp")
 global.on('message', function (topic, message) {
     // message is Buffer
